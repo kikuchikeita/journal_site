@@ -1,0 +1,17 @@
+<h1>記事詳細</h1>
+<p>
+  <%= @article[:title] %>
+</p>
+<p>
+  <%= @article[:body] %>
+</p>
+<p>
+  <%= link_to "一覧へ戻る", articles_path %> 
+</p>
+
+<p>
+  <%= link_to "編集する", edit_article_path(@article) %>
+</p>
+<p>
+  <%= link_to "削除する", article_path, method: :delete, data: {confirm: '削除してよろしいですか？'} %>
+</p>
